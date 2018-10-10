@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<unit id="GiteeLogin" desc="百度-搜索自动化测试系统流程的测试场景点">
+<unit id="SearchProcess" desc="百度-搜索自动化测试系统流程的测试场景点">
 
   <case
       id="前置条件"

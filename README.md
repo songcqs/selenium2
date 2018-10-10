@@ -59,7 +59,7 @@
  - 工程项目编码需要设置成UTF-8，否则会出现中文乱码情况
 
  ---
-### 一、创建测试对象类，例如【GiteeLogin.java】
+### 一、创建测试对象类，例如【SearchProcess.java】
     package TestCases;
 
     import org.testng.annotations.AfterTest;
@@ -100,13 +100,13 @@
     }
 
  ---
-### 二、创建测试脚本用例，例如【GiteeLogin.xml】
+### 二、创建测试脚本用例，例如【SearchProcess.xml】
     <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-    <unit id="GiteeLogin" desc="码云自动登录流程的测试场景点">
+    <unit id="SearchProcess" desc="百度-搜索自动化测试系统流程的测试场景点">
 
     <case 
         id="case1" 
-        name="验证在火狐浏览器中，输入Gitee域名后，可以正常访问">
+        name="验证在浏览器中，输入百度网站域名后，可以正常访问">
         <step action="web-geturl" value="https://www.baidu.com/" desc="访问百度网站"/>
         <step action="web-check" locator="xpath=.//*[@id='su']" expect="" message="访问失败(实际结果和预期结果不一致)" caseid="case1" desc="检查在浏览器中，输入百度网站域名后，可以正常访问"/>
     </case>
@@ -121,6 +121,7 @@
         <step action="wait-forced" value="5000" desc="强制等待5秒"/>
     </case>
 </unit>
+
        <unit>到</unit>之间的内容为测试脚本集合，相当与测试用例集合，搭配测试类使用（WeChatLogin.java）
        <case>到</case>之间的内容为单个测试脚本，相当与单个测试用例，id对应测试用例中的序号，name对应测试用例中的标题，注意这里的id需要和测试类（WeChatLogin.java）中的一致
        <step>到</step>之间的内容为测试脚本步骤，相当与测试用例操作步骤，action=要执行的操作，locator=元素的坐标属性及值，value=需要传递的参数，desc=该步骤的备注，会打印到控制台，expect=预期结果，message=测试执行失败的提示信息，会展示到测试报告中，caseid=测试用例失败截图的名称，一般和Caseid一致，表示是该用例的截图
