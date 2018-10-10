@@ -176,9 +176,9 @@
 #### [TestngReport](https://testerhome.com/uploads/photo/2018/b274b788-861c-4660-9702-47737d61f76b.png!large)
     <?xml version="1.0" encoding="UTF-8"?>
     <suite name="Selenium测试报告" parallel="false" configfailurepolicy ="continue">
-        <test name="码云自动登录流程" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc" time-out="60000" enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <test name="百度-搜索自动化测试系统流程" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc" time-out="60000" enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
             <classes>
-                <class name="TestCases.GiteeLogin"/>
+                <class name="TestCases.SearchProcess"/>
                     <methods>
                         <include name="case1" />
                         <include name="case2" />
@@ -203,7 +203,7 @@
             <suite-file path="TestngReport.xml"></suite-file>
         </suite-files>
         <listeners>
-            <listener class-name="com.jmoney.xiyuyou.service.ExtentReportGenerateService"></listener>
+            <listener class-name="com.jmoney.luckeylink.service.ExtentReportGenerateService"></listener>
         </listeners> 
         <!-- C:\Windows\System32\drivers\etc
         151.139.237.11    cdn.rawgit.com -->
