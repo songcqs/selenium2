@@ -95,7 +95,7 @@
   
         @AfterTest
         public void TearDown(){
-                 runService.closeBrowser();
+                runService.closeBrowser();
         }
     }
 
