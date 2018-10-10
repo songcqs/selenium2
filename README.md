@@ -122,14 +122,19 @@
     </case>
 </unit>
 
-       <unit>到</unit>之间的内容为测试脚本集合，相当与测试用例集合，搭配测试类使用（WeChatLogin.java）
+       <unit>到</unit>之间的内容为测试脚本集合，相当与测试用例集合，搭配测试类使用（SearchProcess.java）
        <case>到</case>之间的内容为单个测试脚本，相当与单个测试用例，id对应测试用例中的序号，name对应测试用例中的标题，注意这里的id需要和测试类（WeChatLogin.java）中的一致
        <step>到</step>之间的内容为测试脚本步骤，相当与测试用例操作步骤，action=要执行的操作，locator=元素的坐标属性及值，value=需要传递的参数，desc=该步骤的备注，会打印到控制台，expect=预期结果，message=测试执行失败的提示信息，会展示到测试报告中，caseid=测试用例失败截图的名称，一般和Caseid一致，表示是该用例的截图
 
   - 具体脚本编方法请参考: https://pan.baidu.com/s/1fdMMGrr9XY6lJdXCv-1AYw
 
  ---
-### 三、火狐浏览器服务配置
+### 三、浏览器服务配置
+    /**
+     * <br>火狐浏览器配置</br>
+     *
+     * @throws Exception
+     */
     public static void AppointFirefoxDriver() throws Exception {
           File file = new File(ConfigUtil.getProperty("webdriver.profile", Constants.CONFIG_COMMON));
           FirefoxProfile profile = new FirefoxProfile(file);        
@@ -137,11 +142,25 @@
           driver .manage().window().maximize();//全屏
     }
 
-    # 浏览器
+    /**
+     * <br>谷歌浏览器配置</br>
+     *
+     * @throws Exception
+     */
+    public static void ChromeDriver(){
+          System.setProperty("webdriver.chrome.driver", ConfigUtil.getProperty("webdriver.chrome.driver", Constants.CONFIG_COMMON)); 
+          driver = new ChromeDriver();
+          driver .manage().window().maximize();//全屏
+    }
+
+    # 火狐浏览器
     webdriver.firefox.bin=C:\\Program Files\\Mozilla Firefox\\firefox.exe
 
-    # 浏览器配置文件
+    # 火狐浏览器配置文件
     webdriver.profile=C:\\Users\\King-liu\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\f7ps027y.default
+
+    # 谷歌浏览器驱动
+    webdriver.chrome.driver=C:\\Users\\King-liu\\AppData\\Local\\Google\\Chrome\\Application\\chromedriver.exe
 
  - 测试执行时需要在common.properties文件中，指定浏览器和浏览器配置文件，当前为火狐浏览器安装路径，和火狐浏览器配置文件路径
 
