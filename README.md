@@ -66,31 +66,31 @@
     import org.testng.annotations.BeforeTest;
     import org.testng.annotations.Test;
 
-    import com.jmoney.xiyuyou.base.TestUnit;
-    import com.jmoney.xiyuyou.service.RunUnitService;
-    import com.jmoney.xiyuyou.service.WebXmlParseService;
+    import com.jmoney.luckeylink.base.TestUnit;
+    import com.jmoney.luckeylink.service.RunUnitService;
+    import com.jmoney.luckeylink.service.WebXmlParseService;
 
-    public class GiteeLogin {
+    public class SearchProcess {
 
         private static RunUnitService runService;
     
         @BeforeTest
         private void stup() throws Exception{
-                TestUnit testunit = WebXmlParseService.parse("src/test/java/TestCaseXml/GiteeLogin.xml");
+                TestUnit testunit = WebXmlParseService.parse("谷歌浏览器","SearchProcess.xml");
                 runService = new RunUnitService(testunit);
-                System.out.println("-----------------------------【码云自动登录流程】--------------------------------");
+                System.out.println("-----------------------------【百度-搜索自动化测试系统流程】--------------------------------");
         }
   
         @Test
         public void case1() throws Exception{
                 runService.runCase("case1");
-                runService.TestReportRemarks("验证在火狐浏览器中，输入Gitee域名后，可以正常访问");
+                runService.TestReportRemarks("验证在谷歌浏览器中，输入百度网站域名后，可以正常访问");
         }
   
         @Test
          public void case2() throws Exception{
                 runService.runCase("case2");
-                runService.TestReportRemarks("验证在登录界面，输入正确的账号和密码，点击登录按钮后，可以正常登录成功");
+                runService.TestReportRemarks("验证在百度主界面，搜索栏中输入自动化测试系统，点击回车按钮后，可以正常搜索出对应包含自动化测试系统的信息");
         }
   
         @AfterTest
@@ -107,26 +107,20 @@
     <case 
         id="case1" 
         name="验证在火狐浏览器中，输入Gitee域名后，可以正常访问">
-        <step action="web-geturl" value="https://gitee.com" desc="访问Gitee网站域名"/>
-        <step action="web-check" locator="xpath=.//*[@id='git-nav-user-bar']/a[2]" expect="登录" message="访问失败(实际结果和预期结果不一致)" caseid="Case1" desc="检查在火狐浏览器中，输入Gitee域名后，是否可以正常访问"/>
+        <step action="web-geturl" value="https://www.baidu.com/" desc="访问百度网站"/>
+        <step action="web-check" locator="xpath=.//*[@id='su']" expect="" message="访问失败(实际结果和预期结果不一致)" caseid="case1" desc="检查在浏览器中，输入百度网站域名后，可以正常访问"/>
     </case>
 
-    <case 
-         id="case2" 
-        name="验证在登录界面，输入正确的账号和密码，点击登录按钮后，可以正常登录成功">
-        <step action="web-click" locator="xpath=.//*[@id='git-nav-user-bar']/a[2]" desc="点击登录按钮"/>
-        <step action="web-input" locator="xpath=.//*[@id='user_login']" value="XXXXXX" desc="输入正确的账号"/>  
-        <step action="wait-forced" value="1000" desc="强制等待1秒"/>
-        <step action="web-input" locator="xpath=.//*[@id='user_password']" value="XXXXXX" desc="输入正确的密码"/>
-        <step action="wait-forced" value="1000" desc="强制等待1秒"/>
-        <step action="web-click" locator="xpath=.//*[@id='new_user']/div[2]/div[7]/input" desc="点击登录按钮"/>
-        <step action="web-implicit" value="5000" desc="隐性等待5秒"/>
-        <step action="web-click" locator="xpath=.//*[@id='git-nav-user']" desc="点击头像区域"/>
-        <step action="web-check" locator="xpath=.//*[@id='git-nav-user']/div/a[1]" expect="个人主页" message="登录失败(实际结果和预期结果不一致)" caseid="Case2" desc="检查在登录界面，输入正确的账号和密码，点击登录按钮后，是否可以正常登录成功"/>
+    <case
+        id="case2"
+        name="验证在百度主界面，搜索栏中输入自动化测试系统，点击回车按钮后，可以正常搜索出对应包含自动化测试系统的信息">
+        <step action="web-input" locator="xpath=.//*[@id='kw']" value="[IT] 软件自动化解决方案『开源项目』基于 JavaFx 的自动化测试系统 " desc="输入搜索的信息"/>
+        <step action="windows-keybg" key="ENTER" desc="点击回车按钮"/>
+        <step action="web-check" locator="xpath=.//*[@id='1']/h3/a/em[3]" expect="的自动化测试系统" message="搜索失败(实际结果和预期结果不一致)" caseid="case2" desc="检查在百度主界面，搜索栏中输入自动化测试系统，点击回车按钮后，可以正常搜索出对应包含自动化测试系统的信息"/>
+        <step action="web-click" locator="xpath=.//*[@id='1']/h3/a" desc="选择搜索的内容"/>
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
     </case>
 </unit>
-
-    以上只是单个案例，账户和密码请用自己的真实数据，是不是很简单，和写测试用例基本一致
        <unit>到</unit>之间的内容为测试脚本集合，相当与测试用例集合，搭配测试类使用（WeChatLogin.java）
        <case>到</case>之间的内容为单个测试脚本，相当与单个测试用例，id对应测试用例中的序号，name对应测试用例中的标题，注意这里的id需要和测试类（WeChatLogin.java）中的一致
        <step>到</step>之间的内容为测试脚本步骤，相当与测试用例操作步骤，action=要执行的操作，locator=元素的坐标属性及值，value=需要传递的参数，desc=该步骤的备注，会打印到控制台，expect=预期结果，message=测试执行失败的提示信息，会展示到测试报告中，caseid=测试用例失败截图的名称，一般和Caseid一致，表示是该用例的截图
