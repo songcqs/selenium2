@@ -19,9 +19,6 @@ import org.slf4j.LoggerFactory;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
 import com.jcraft.jsch.UserInfo;
-import com.jmoney.luckeylink.util.ConfigUtil;
-import com.jmoney.luckeylink.util.Constants;
-import com.jmoney.luckeylink.util.DBHelper;
 
 /**
  * 数据库操作类

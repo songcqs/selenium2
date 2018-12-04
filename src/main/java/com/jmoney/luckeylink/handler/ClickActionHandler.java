@@ -73,6 +73,31 @@ public class ClickActionHandler {
     }
 
 	/**
+	 * <br>Web端切换iframe控件操作</br>
+	 *
+	 * @param step
+	 * @throws Exception 
+	 */
+	public void switchIframe(TestStep step) throws Exception{ 
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
+		WebDriver driver = step.getWebDriver();
+		driver.switchTo().frame(Integer.parseInt(step.getValue()));//通过index获取
+//		driver.switchTo().frame(SeleniumUtil.getElement(step));//通过ID，NAME获取
+    }
+	
+	/**
+	 * <br>Web端退出iframe控件操作</br>
+	 *
+	 * @param step
+	 * @throws Exception 
+	 */
+	public void quitIframe(TestStep step) throws Exception{ 
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
+		WebDriver driver = step.getWebDriver();
+		driver.switchTo().defaultContent();
+    }
+	
+	/**
 	 * <br>Web端点击浏览器弹出框的确定键</br>
 	 *
 	 * @param step

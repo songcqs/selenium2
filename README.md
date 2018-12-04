@@ -208,7 +208,7 @@
         <!-- C:\Windows\System32\drivers\etc
         151.139.237.11    cdn.rawgit.com -->
     </suite>
- - 第二种测种试报告，需要翻墙才能正常显示，否则页面显示乱码，因为是国外的东西
+ - 第二种测试报告，需要翻墙才能正常显示，否则页面显示乱码，因为是国外的东西
  - 或者在C:\Windows\System32\drivers\etc    host文件末尾添加151.139.237.11   cdn.rawgit.com
  ![](https://testerhome.com/uploads/photo/2018/e3903a1f-0cf5-43f8-9cb5-42206c50f678.png!large)
  

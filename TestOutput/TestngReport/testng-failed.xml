@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite configfailurepolicy="continue" name="Failed suite [Selenium测试报告]">
-  <listeners>
-    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-    <listener class-name="com.jmoney.luckeylink.service.ExtentReportGenerateService"/>
-  </listeners>
-  <test thread-count="5" verbose="3" name="百度-搜索自动化测试系统流程" time-out="60000">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test verbose="2" name="Default test">
     <classes>
-      <class name="TestCases.SearchProcess">
-        <methods>
-          <include name="case1"/>
-          <include name="case2"/>
-          <exclude name="Precondition"/>
-          <exclude name=""/>
-        </methods>
-      </class> <!-- TestCases.SearchProcess -->
+      <class name="TestCases.SearchProcess"/>
     </classes>
-  </test> <!-- 百度-搜索自动化测试系统流程 -->
-</suite> <!-- Failed suite [Selenium测试报告] -->
+  </test> <!-- Default test -->
+</suite> <!-- Failed suite [Default suite] -->

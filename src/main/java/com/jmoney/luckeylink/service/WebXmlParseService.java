@@ -63,7 +63,7 @@ public class WebXmlParseService {
 		File file = new File(ConfigUtil.getProperty("webdriver.profile", Constants.CONFIG_COMMON));
  	    FirefoxProfile profile = new FirefoxProfile(file);        
  	    driver = new FirefoxDriver(profile);
-// 	    driver .manage().window().maximize();//全屏
+ 	    driver .manage().window().maximize();//全屏
 	}
 	
 	/**
@@ -74,7 +74,7 @@ public class WebXmlParseService {
 	public static void ChromeDriver(){
 		System.setProperty("webdriver.chrome.driver", ConfigUtil.getProperty("webdriver.chrome.driver", Constants.CONFIG_COMMON)); 
 		driver = new ChromeDriver();
-//		driver .manage().window().maximize();//全屏
+		driver .manage().window().maximize();//全屏
 	}
 
 	/**

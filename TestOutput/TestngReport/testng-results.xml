@@ -8,38 +8,34 @@
       <![CDATA[验证在百度主界面，搜索栏中输入自动化测试系统，点击回车按钮后，可以正常搜索出对应包含自动化测试系统的信息]]>
     </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="0" started-at="2018-10-10T03:31:16Z" finished-at="2018-10-10T03:31:16Z">
+  <suite name="Default suite" duration-ms="14177" started-at="2018-12-04T03:56:59Z" finished-at="2018-12-04T03:57:13Z">
     <groups>
     </groups>
-  </suite> <!-- Suite -->
-  <suite name="Selenium测试报告" duration-ms="11294" started-at="2018-10-10T03:31:05Z" finished-at="2018-10-10T03:31:16Z">
-    <groups>
-    </groups>
-    <test name="百度-搜索自动化测试系统流程" duration-ms="11294" started-at="2018-10-10T03:31:05Z" finished-at="2018-10-10T03:31:16Z">
+    <test name="Default test" duration-ms="14177" started-at="2018-12-04T03:56:59Z" finished-at="2018-12-04T03:57:13Z">
       <class name="TestCases.SearchProcess">
-        <test-method status="PASS" signature="stup()[pri:0, instance:TestCases.SearchProcess@73f792cf]" name="stup" is-config="true" duration-ms="2608" started-at="2018-10-10T11:31:05Z" finished-at="2018-10-10T11:31:07Z">
+        <test-method status="PASS" signature="stup()[pri:0, instance:TestCases.SearchProcess@34cd072c]" name="stup" is-config="true" duration-ms="4699" started-at="2018-12-04T11:56:59Z" finished-at="2018-12-04T11:57:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stup -->
-        <test-method status="PASS" signature="case1()[pri:0, instance:TestCases.SearchProcess@73f792cf]" name="case1" duration-ms="883" started-at="2018-10-10T11:31:07Z" finished-at="2018-10-10T11:31:08Z">
+        <test-method status="PASS" signature="case1()[pri:0, instance:TestCases.SearchProcess@34cd072c]" name="case1" duration-ms="1203" started-at="2018-12-04T11:57:04Z" finished-at="2018-12-04T11:57:05Z">
           <reporter-output>
             <line>
               <![CDATA[验证在浏览器中，输入百度网站域名后，可以正常访问]]>
             </line>
           </reporter-output>
         </test-method> <!-- case1 -->
-        <test-method status="PASS" signature="case2()[pri:0, instance:TestCases.SearchProcess@73f792cf]" name="case2" duration-ms="6933" started-at="2018-10-10T11:31:08Z" finished-at="2018-10-10T11:31:15Z">
+        <test-method status="PASS" signature="case2()[pri:0, instance:TestCases.SearchProcess@34cd072c]" name="case2" duration-ms="7263" started-at="2018-12-04T11:57:05Z" finished-at="2018-12-04T11:57:12Z">
           <reporter-output>
             <line>
               <![CDATA[验证在百度主界面，搜索栏中输入自动化测试系统，点击回车按钮后，可以正常搜索出对应包含自动化测试系统的信息]]>
             </line>
           </reporter-output>
         </test-method> <!-- case2 -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:TestCases.SearchProcess@73f792cf]" name="TearDown" is-config="true" duration-ms="863" started-at="2018-10-10T11:31:15Z" finished-at="2018-10-10T11:31:16Z">
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:TestCases.SearchProcess@34cd072c]" name="TearDown" is-config="true" duration-ms="998" started-at="2018-12-04T11:57:12Z" finished-at="2018-12-04T11:57:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
       </class> <!-- TestCases.SearchProcess -->
-    </test> <!-- 百度-搜索自动化测试系统流程 -->
-  </suite> <!-- Selenium测试报告 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

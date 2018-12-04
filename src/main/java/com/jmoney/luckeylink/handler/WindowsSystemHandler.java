@@ -16,6 +16,7 @@ public class WindowsSystemHandler {
 	 * @throws Exception 
 	 */
 	public void windowsKeybg(TestStep step) throws Exception{ 
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
 		Actions action = new Actions(step.getWebDriver()); 
 	    action.sendKeys(Keys.valueOf(step.getKey())).perform();
 	    step.getWebDriver().manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
@@ -28,6 +29,7 @@ public class WindowsSystemHandler {
 	 * @throws Exception 
 	 */
 	public void windowsKeybc(TestStep step) throws Exception{ 
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
 		Actions action = new Actions(step.getWebDriver()); 
 		action.keyDown(Keys.valueOf(step.getKey())).sendKeys(step.getValue()).perform();
 	    step.getWebDriver().manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
@@ -40,6 +42,7 @@ public class WindowsSystemHandler {
 	 * @throws Exception 
 	 */
 	public void windowsSkeybc(TestStep step) throws Exception{ 
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
 		Actions action = new Actions(step.getWebDriver()); 
 		action.keyDown(Keys.valueOf(step.getKey())).sendKeys(Keys.valueOf(step.getKeys())).keyUp(Keys.valueOf(step.getKey())).sendKeys(Keys.valueOf(step.getKeys())).perform();
 	    step.getWebDriver().manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
@@ -52,6 +55,7 @@ public class WindowsSystemHandler {
 	 * @throws Exception 
 	 */
 	public void windowsSkeybcm(TestStep step) throws Exception{ 
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
 		Actions action = new Actions(step.getWebDriver()); 
 		action.keyDown(Keys.valueOf(step.getKey())).sendKeys(Keys.valueOf(step.getKeys())).sendKeys(step.getValue()).keyUp(Keys.valueOf(step.getKey())).sendKeys(Keys.valueOf(step.getKeys())).sendKeys(step.getValue()).perform();
 	    step.getWebDriver().manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
@@ -64,6 +68,7 @@ public class WindowsSystemHandler {
 	 * @throws Exception 
 	 */
 	public void windowsStcnw(TestStep step) throws Exception{ 
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
 		String WindowHandle  = step.getWebDriver().getWindowHandle();
 		step.getWebDriver().switchTo().window(WindowHandle);
     	step.getWebDriver().manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);

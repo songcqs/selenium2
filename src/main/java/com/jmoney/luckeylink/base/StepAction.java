@@ -59,6 +59,8 @@ public enum StepAction {
     ANDROID_CLICK("android-click", "Android端点击操作", ClickActionHandler.class),
     SELECT_CLICK("select-click", "Web端选项框点击操作", ClickActionHandler.class),
     SCROLL_ElEMENT("scroll-element", "Web端滚动到元素操作", ClickActionHandler.class),
+    SWITCH_IFRAME("switch-Iframe", "Web端切换iframe控件操作", ClickActionHandler.class),
+    QUIT_IFRAME("quit-Iframe", "Web端退出iframe控件操作", ClickActionHandler.class),
     CLICK_OK("click-ok", "点击浏览器弹出框的确定键", ClickActionHandler.class),
     CLICK_CANCEL("click-cancel", "点击浏览器弹出框的取消键", ClickActionHandler.class),
     CLICK_TEXT("click-text", "执行浏览器文本弹出框的文本输入", ClickActionHandler.class),
