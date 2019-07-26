@@ -8,30 +8,30 @@
       <![CDATA[验证在百度主界面，搜索栏中输入自动化测试系统，点击回车按钮后，可以正常搜索出对应包含自动化测试系统的信息]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21945" started-at="2019-03-27T04:16:04Z" finished-at="2019-03-27T04:16:26Z">
+  <suite name="Default suite" duration-ms="16712" started-at="2019-07-26T06:35:17Z" finished-at="2019-07-26T06:35:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21945" started-at="2019-03-27T04:16:04Z" finished-at="2019-03-27T04:16:26Z">
+    <test name="Default test" duration-ms="16712" started-at="2019-07-26T06:35:17Z" finished-at="2019-07-26T06:35:34Z">
       <class name="TestCases.SearchProcess">
-        <test-method status="PASS" signature="stup()[pri:0, instance:TestCases.SearchProcess@34cd072c]" name="stup" is-config="true" duration-ms="4764" started-at="2019-03-27T12:16:04Z" finished-at="2019-03-27T12:16:08Z">
+        <test-method status="PASS" signature="stup()[pri:0, instance:TestCases.SearchProcess@34cd072c]" name="stup" is-config="true" duration-ms="4324" started-at="2019-07-26T14:35:17Z" finished-at="2019-07-26T14:35:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stup -->
-        <test-method status="PASS" signature="case1()[pri:0, instance:TestCases.SearchProcess@34cd072c]" name="case1" duration-ms="2684" started-at="2019-03-27T12:16:08Z" finished-at="2019-03-27T12:16:11Z">
+        <test-method status="PASS" signature="case1()[pri:0, instance:TestCases.SearchProcess@34cd072c]" name="case1" duration-ms="1389" started-at="2019-07-26T14:35:21Z" finished-at="2019-07-26T14:35:23Z">
           <reporter-output>
             <line>
               <![CDATA[验证在浏览器中，输入百度网站域名后，可以正常访问]]>
             </line>
           </reporter-output>
         </test-method> <!-- case1 -->
-        <test-method status="PASS" signature="case2()[pri:0, instance:TestCases.SearchProcess@34cd072c]" name="case2" duration-ms="13374" started-at="2019-03-27T12:16:11Z" finished-at="2019-03-27T12:16:24Z">
+        <test-method status="PASS" signature="case2()[pri:0, instance:TestCases.SearchProcess@34cd072c]" name="case2" duration-ms="9665" started-at="2019-07-26T14:35:23Z" finished-at="2019-07-26T14:35:32Z">
           <reporter-output>
             <line>
               <![CDATA[验证在百度主界面，搜索栏中输入自动化测试系统，点击回车按钮后，可以正常搜索出对应包含自动化测试系统的信息]]>
             </line>
           </reporter-output>
         </test-method> <!-- case2 -->
-        <test-method status="PASS" signature="TearDown()[pri:0, instance:TestCases.SearchProcess@34cd072c]" name="TearDown" is-config="true" duration-ms="1108" started-at="2019-03-27T12:16:24Z" finished-at="2019-03-27T12:16:26Z">
+        <test-method status="PASS" signature="TearDown()[pri:0, instance:TestCases.SearchProcess@34cd072c]" name="TearDown" is-config="true" duration-ms="1302" started-at="2019-07-26T14:35:33Z" finished-at="2019-07-26T14:35:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->

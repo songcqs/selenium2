@@ -30,6 +30,7 @@ public enum StepAction {
     WINDOWS_SKEYBC("windows-skeybc", "模拟点击Windows系统键盘特殊组合按键,例如：Ctrl+Tab", WindowsSystemHandler.class),
     WINDOWS_SKEYBCM("windows-skeybcm", "模拟点击Windows系统键盘多重特殊组合按键,例如：Ctrl+Shift+K", WindowsSystemHandler.class),
     WINDOWS_STCNW("windows-stcnw", "模拟操作切换浏览器到当前最新窗口", WindowsSystemHandler.class),
+    WINDOWS_STCNWINDEX("windows-stcnwindex", "模拟操作切换浏览器到指定窗口", WindowsSystemHandler.class),
     WINDOWS_CMD("windows-cmd", "模拟执行Windows系统的cmd命令", WindowsSystemHandler.class),
     
     ANDROID_KEYCODE("android-keycode", "模拟Android系统键盘按键操作,例如：KEYCODE_HOME 3", AndroidSystemHandler.class),
@@ -50,7 +51,9 @@ public enum StepAction {
     WEB_INPUT("web-input", "Web端输入操作", InputActionHandler.class),
     ANDROID_INPUT("android-input", "Android端Appium输入操作", InputActionHandler.class),
     
-    WEB_CHECK("web-check", "检查Web界面元素值", CheckActionHandler.class),
+    WEB_CHECK("web-check", "检查Web界面元素的文本值", CheckActionHandler.class),
+    WEB_CHECKVALUE("web-checkvalue", "检查Web界面元素的属性值", CheckActionHandler.class),
+    WEB_CHECKJS("web-checkjs", "检查Web界面调用JS返回的值", CheckActionHandler.class),
     WEB_CHECKLIST("web-checklist", "检查Web本地缓存的list中的元素", CheckActionHandler.class),
     ANDROID_CHECK("android-check", "检查Android界面元素值", CheckActionHandler.class),
     ANDROID_CHECKLIST("android-checklist", "检查Android本地缓存的list中的元素", CheckActionHandler.class),

@@ -1,5 +1,6 @@
 package com.jmoney.luckeylink.handler;
 
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Keys;
@@ -62,15 +63,38 @@ public class WindowsSystemHandler {
 	}
 	
 	/**
-	 * <br>模拟操作切换浏览器到当前最新窗口</br>
+	 * <br>模拟操作切换浏览器到当前最新窗口，默认最后一个窗口</br>
 	 *
 	 * @param step
 	 * @throws Exception 
 	 */
 	public void windowsStcnw(TestStep step) throws Exception{ 
 		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
-		String WindowHandle  = step.getWebDriver().getWindowHandle();
-		step.getWebDriver().switchTo().window(WindowHandle);
+		//得到当前所有窗口的Handles  
+		Set<String> WindowHandle  = step.getWebDriver().getWindowHandles();
+		//将Handles存入list中  
+		List<String> WindowHandleList = new ArrayList<String>(WindowHandle);
+//		System.out.println(WindowHandleList);
+		//切换浏览器到当前最新窗口
+		step.getWebDriver().switchTo().window(WindowHandleList.get(WindowHandleList.size()-1));
+    	step.getWebDriver().manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+	}
+	
+	/**
+	 * <br>模拟操作切换浏览器到当前指定窗口，适合多窗口互相切换</br>
+	 *
+	 * @param step
+	 * @throws Exception 
+	 */
+	public void windowsStcnwindex(TestStep step) throws Exception{ 
+		System.out.println("『正常测试』开始执行: " + "<" +step.getDesc() + ">");
+		//得到当前所有窗口的Handles  
+		Set<String> WindowHandle  = step.getWebDriver().getWindowHandles();
+		//将Handles存入list中  
+		List<String> WindowHandleList = new ArrayList<String>(WindowHandle);
+//		System.out.println(WindowHandleList);
+		//切换到浏览器指定窗口中，0表示第一个窗口，1表示第二窗口
+		step.getWebDriver().switchTo().window(WindowHandleList.get(Integer.parseInt(step.getValue())));
     	step.getWebDriver().manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
 	}
 	

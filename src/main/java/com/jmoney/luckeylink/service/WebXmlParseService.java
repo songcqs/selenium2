@@ -46,7 +46,7 @@ public class WebXmlParseService {
 	@SuppressWarnings("unused")
 	private static final Logger LOG = LoggerFactory.getLogger(WebXmlParseService.class);
 
-	private static WebDriver driver;
+	public static WebDriver driver;
 	
 	/**
 	 * <br>火狐浏览器配置</br>
@@ -74,7 +74,7 @@ public class WebXmlParseService {
 	public static void ChromeDriver(){
 		System.setProperty("webdriver.chrome.driver", ConfigUtil.getProperty("webdriver.chrome.driver", Constants.CONFIG_COMMON)); 
 		driver = new ChromeDriver();
-		driver .manage().window().maximize();//全屏
+//		driver .manage().window().maximize();//全屏
 	}
 
 	/**
